@@ -8,11 +8,11 @@ import {
 import { protect } from "../middleware/authMiddleware.js";
 
 const router = express.Router();
-
-router.route("/").post(protect, createFeedback).get(protect, getMyFeedbacks);
-router.route("/:id").put(protect, updateFeedback).delete(protect, deleteFeedback);
-router.route("/test").get(protect, (req, res) => {
+router.route("/test").get((req, res) => {
   res.status(200).json({ message: "Test route is working" });
 });
+router.route("/").post(protect, createFeedback).get(protect, getMyFeedbacks);
+router.route("/:id").put(protect, updateFeedback).delete(protect, deleteFeedback);
+
 
 export default router;
