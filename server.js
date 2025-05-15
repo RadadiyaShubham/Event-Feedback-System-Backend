@@ -12,7 +12,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // Your frontend URL (Vite default)
+    origin: "https://nimble-nasturtium-dcfb04.netlify.app", // Your frontend URL (Vite default)
     credentials: true,
   })
 );
